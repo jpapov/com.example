@@ -1,8 +1,20 @@
 <html>
 <body>
-<div>
-    {{some}}
-</div>
+    <div>
+        <form method="post" action="new">
+            <input type="text" placeholder="Введите сообщение" />
+            <input type="text" placeholder="Тэг"/>
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+    <div>Список сообщений</div>
+    {{#messages}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{text}}</span>
+        <i>{{tag}}</i>
+    </div>
+    {{/messages}}
 
 </body>
 </html>
